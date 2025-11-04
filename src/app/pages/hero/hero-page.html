@@ -1,0 +1,45 @@
+<div class="container">
+
+    <h1>{{ name() }}</h1>
+
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Nombre del Héroe</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Hero Name" value="{{ name() }}" readonly>
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Edad del Héroe</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Hero Name" value="{{ age() }}" readonly>
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Descripción</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" readonly>{{ getHeroDescription() }}</textarea>
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Nombre del Héroe Capitalizado</label>
+      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Hero Name" value="{{ getHeroNameUppercase() }}" readonly>
+    </div>
+
+    <br>
+
+    <button (click)="changeHeroName('Spiderman')" class="btn btn-primary mx-2">
+      Name Spiderman
+    </button>
+
+    <button (click)="changeHeroAge(22)" class="btn btn-primary mx-2">
+        Age Spiderman
+    </button>
+
+    <button (click)="changeHeroNameAndAge('Spiderman', 22)" class="btn btn-primary">
+        Name & Age Spiderman
+    </button>
+
+    <button (click)="resetForm()" class="btn btn-primary mx-2">Reset</button>
+
+</div>
+
+
+
+
