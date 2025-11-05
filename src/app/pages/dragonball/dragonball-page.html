@@ -16,7 +16,13 @@
             @for (character of characters(); track character.id; let i = $index) {
                 <li>
                     <span>{{ i + 1 }} - {{ character.name }}</span>
-                    <strong class="text-danger"> ({{ character.power }}) </strong>
+                    <strong [class.text-danger]="character.power > 9000"
+                            [class.text-info]="character.power < 9000">
+                        ({{ character.power }})
+                    </strong>
+                    <!-- <strong [ngClass]="powerClasess()">
+                        ({{ character.power }})
+                    </strong> -->
                 </li>
             }
         </ul>
