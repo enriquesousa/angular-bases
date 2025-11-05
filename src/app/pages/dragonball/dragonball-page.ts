@@ -8,20 +8,21 @@ interface Character {
 }
 
 @Component({
-  imports: [ NgClass ],
-  templateUrl: './dragonball-page.html',
-  styleUrl: './dragonball-page.css',
+    //   imports: [ NgClass ],
+    templateUrl: './dragonball-page.html',
+    styleUrl: './dragonball-page.css',
 })
 export class DragonballPageComponent {
 
-    characters =signal<Character[]>([
+    characters = signal<Character[]>([
         { id: 1, name: 'Goku', power: 9001 },
-        { id: 1, name: 'Vegueta', power: 8000 },
-        { id: 1, name: 'Piccolo', power: 3000 },
-        { id: 1, name: 'Trunks', power: 9000 },
+        { id: 2, name: 'Vegueta', power: 8000 },
+        { id: 3, name: 'Piccolo', power: 3000 },
+        { id: 4, name: 'Trunks', power: 9000 },
+        { id: 5, name: 'Yamcha', power: 500 },
     ]);
 
-    powerClasess = computed( () => {
+    powerClasess = computed(() => {
         return {
             'text-danger': true,
         }
