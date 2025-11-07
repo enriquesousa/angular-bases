@@ -14,16 +14,16 @@
             #txtName
         />
 
-        <br>
-
-        <h5>Poder: {{ power() }}</h5>
-        <input type="number" class="form-control"
+        <input type="number" class="form-control mt-2"
             placeholder="Poder"
             [value]="power()"
-            (change)="power.set(txtPower.valueAsNumber)"
-            (input)="power.set(txtPower.valueAsNumber)"
+            (change)="power.set(+txtPower.value)"
+            (input)="power.set(+txtPower.value)"
             #txtPower
         />
+        <!-- Otra forma de transformar text a number -->
+        <!-- (change)="power.set(txtPower.valueAsNumber)"
+        (input)="power.set(txtPower.valueAsNumber)" -->
 
         <br>
 
@@ -35,7 +35,7 @@
         <h3>Listado Fuertes</h3>
         <ul>
             @for (character of characters(); track character.id; let i = $index) {
-                @if(character.power > 500){
+                @if(character.power > 100){
                     <li>
                         <span>{{ i + 1 }} - {{ character.name }}</span>
                         <strong [class.text-danger]="character.power > 9000" [class.text-info]="character.power < 9000">
