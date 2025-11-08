@@ -4,6 +4,7 @@ import { Hero2PageComponent, HeroPageComponent } from './pages/hero/hero-page';
 import { App } from './app';
 import { HomePageComponent } from './pages/home/home-page';
 import { DragonballPageComponent } from './pages/dragonball/dragonball-page';
+import { DragonballSuperPageComponent } from './pages/dragonball-super/dragonball-super-page';
 
 export const routes: Routes = [
 
@@ -12,6 +13,7 @@ export const routes: Routes = [
     { path: 'hero', component: HeroPageComponent, title: 'Hero | Page' },
     { path: 'hero-tarea', component: Hero2PageComponent, title: 'Hero Tarea | Page' },
     { path: 'dragonball', component: DragonballPageComponent, title: 'Dragonball | Page' },
+    { path: 'dragonball-super', component: DragonballSuperPageComponent, title: 'Dragonball | Page' },
 
     { path: '**', redirectTo: '' },
 ];
