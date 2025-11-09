@@ -49,6 +49,12 @@
 
     // Bookmarks Que se guarden en este proyecto
     "bookmarks.saveBookmarksInProject": true,
+    "angular-schematics.schematicsDefaultOptions": {
+        "angular-*": {
+            "externalTemplate": true,
+            "skipStyle": true
+        }
+    },
 
 
 }
